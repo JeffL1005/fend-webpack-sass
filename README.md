@@ -2,7 +2,7 @@
 
 The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
 
-If you want to follow along, start from branch 0-initial-setup. Each branch in this project is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step is also roughly a git commit if you look at the history) which you can use as a checklist when setting up your own projects. 
+If you want to follow along, start from branch 0-initial-setup. Each branch in this project is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step is also roughly a git commit if you look at the history) which you can use as a checklist when setting up your own projects.
 
 ## What we will cover
 
@@ -27,3 +27,19 @@ git clone -- git@github.com:[your-user-name]/webpack-express.git --
 - ```npm install```
 - ```npm start``` to start the app
 - this app runs on localhost:8080, but you can of course edit that in server.js
+
+<!-- Further Notes -->
+
+## Add Sass Loader
+
+Use the following:
+npm i -D style-loader node-sass css-loader sass-loader
+
+Running that on this project causes errors, but it's already in the config here.
+
+Add sass to the module rules in webpack (dev). This is a good example of chaining loaders. Note: chaining runs right to left!
+
+Add babel with the following:
+npm i -D @babel/core @babel/preset-env babel-loader
+
+You will need to import your scss files as dependencies in your index.js file as well.
